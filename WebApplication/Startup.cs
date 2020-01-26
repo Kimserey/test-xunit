@@ -13,6 +13,19 @@ using Microsoft.Extensions.Logging;
 
 namespace WebApplication
 {
+    public interface IMyService
+    {
+        int Get();
+    }
+
+    public class MyService : IMyService
+    {
+        public int Get()
+        {
+            return 1;
+        }
+    }
+
     public class Startup
     {
         public Startup(IConfiguration configuration)
@@ -22,13 +35,12 @@ namespace WebApplication
 
         public IConfiguration Configuration { get; }
 
-        // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddTransient<IMyService, MyService>();
             services.AddControllers();
         }
 
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())
@@ -36,13 +48,11 @@ namespace WebApplication
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseHttpsRedirection();
-
-            app.UseRouting();
-
-            app.UseAuthorization();
-
-            app.UseEndpoints(endpoints => { endpoints.MapControllers(); });
+            app.UseRouting()
+               .UseEndpoints(endpoints =>
+               {
+                   endpoints.MapControllers();
+               });
         }
     }
 }
