@@ -46,6 +46,7 @@ namespace WebApplication
                 );
 
             services.AddTransient<IMyService, MyService>();
+
             services.AddControllers();
         }
 

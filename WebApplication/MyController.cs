@@ -28,9 +28,20 @@ namespace WebApplication
 
         [HttpGet("user/{name}")]
 
-        public async Task<ActionResult<User>> GetUser(string name)
+        public async Task<ActionResult<object>> GetUser(string name)
         {
-            return await _db.Users.FirstAsync(u => u.Name == name);
+            var user =
+                await _db.Users.Include(u => u.Profile).FirstAsync(u => u.Name == name);
+
+            return new
+            {
+                id = user.Id,
+                name = user.Name,
+                profile = new
+                {
+                    address = user.Profile.Address
+                }
+            };
         }
     }
 }
