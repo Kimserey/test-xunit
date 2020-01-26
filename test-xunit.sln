@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "test-xunit", "test-xunit\test-xunit.csproj", "{B2DFBD74-0AAE-45CC-A278-3D7D9E66DD26}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication", "WebApplication\WebApplication.csproj", "{0C83B8AB-19E3-4F92-A0E5-D29B9E8A2C83}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B2DFBD74-0AAE-45CC-A278-3D7D9E66DD26}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B2DFBD74-0AAE-45CC-A278-3D7D9E66DD26}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B2DFBD74-0AAE-45CC-A278-3D7D9E66DD26}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B2DFBD74-0AAE-45CC-A278-3D7D9E66DD26}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0C83B8AB-19E3-4F92-A0E5-D29B9E8A2C83}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C83B8AB-19E3-4F92-A0E5-D29B9E8A2C83}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0C83B8AB-19E3-4F92-A0E5-D29B9E8A2C83}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0C83B8AB-19E3-4F92-A0E5-D29B9E8A2C83}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
